@@ -2,8 +2,8 @@ pipeline {
     agent any
 
     environment {
-        NETLIFY_SITE_ID = '21ac4ed1-3190-4348-be9b-8a6aa1e84d85'
-        NETLIFY_AUTH_TOKEN = credentials('adbnetlify')
+        NETLIFY_SITE_ID = '6d24558a-b445-4ffb-ba69-0be63c5aa65b'
+        NETLIFY_AUTH_TOKEN = credentials('netlify-token')
     }
 
     stages {
@@ -87,7 +87,7 @@ pipeline {
             }
             steps {
                 sh '''
-                    npm install netlify-cli@latest
+                    npm install netlify-cli@20.1.1
                     node_modules/.bin/netlify --version
                     node_modules/.bin/netlify status
                     node_modules/.bin/netlify deploy --dir=build --prod
