@@ -1,6 +1,11 @@
 pipeline {
     agent any
 
+    environment {
+        NETLIFY_SITE_ID = 'subtle-kelpie-1b0a61'
+        NETLIFY_AUTH_TOKEN = credentials('adbnetlify')
+    }
+
     stages {
         /*
 
