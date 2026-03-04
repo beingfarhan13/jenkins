@@ -5,6 +5,7 @@ pipeline {
         CI_ENVIRONMENT_URL = 'https://polite-shortbread-fdc963.netlify.app/'
         NETLIFY_SITE_ID = '6d24558a-b445-4ffb-ba69-0be63c5aa65b'
         NETLIFY_AUTH_TOKEN = credentials('netlify-token')
+        REACT_APP_VERSION = "1.0.{$BUILD_NUMBER}"
     }
 
     stages {
